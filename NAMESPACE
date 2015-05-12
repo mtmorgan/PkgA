@@ -1,4 +1,4 @@
 import(methods)
 exportClasses(A, B)
-exportMethods(show)
+exportMethods(show, dim)
 
