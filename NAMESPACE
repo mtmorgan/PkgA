@@ -1,4 +1,3 @@
-import(methods)
-exportClasses(A, B)
-exportMethods(show, dim)
+import(Biostrings)
+export(doit)
 

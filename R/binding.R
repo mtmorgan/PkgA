@@ -1,8 +1,22 @@
-setClass("A")
-setClass("B", contains="A")
+setGeneric("subsetSites",
+           function(object, index){
+             standardGeneric("subsetSites")
+           }
+)
 
-setMethod("show", "A", function(object) cat("A\n"))
-setMethod("show", "B", function(object) cat("B\n"))
+setMethod("subsetSites",
+          signature("DNAStringSet", "integer"),
+          function(object, index){
+            index <- rep.int(list(index), length(object))
+            return(object[index])
+          }
+)
 
-setMethod("dim", "A", function(x) "A-dim")
-setMethod("dim", "B", function(x) "B-dim")
+doit <- function() {
+    dna <- DNAStringSet(
+        readDNAMultipleAlignment(
+            filepath = system.file("extdata", "msx2_mRNA.aln",
+                                   package="Biostrings"),
+            format="clustal"))
+    subsetSites(dna, 1:50)
+}
