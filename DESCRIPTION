@@ -6,5 +6,5 @@ Date: 2012-08-05
 Author: Martin Morgan
 Maintainer: Martin Morgan <mtmorgan@fhcrc.org>
 Description: This branch tests for conflicts during import.
-Imports: NMF
+Imports: NMF, ggplot2
 License: Artistic-2.0
