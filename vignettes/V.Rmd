@@ -1,0 +1,11 @@
+---
+title: "A vignette"
+author: "A Scientist"
+vignette: >
+  % \VignetteIndexEntry{An index}
+  % \VignetteEngine{knitr::rmarkdown}
+---
+
+```{r}
+cat("hello world")
+```
