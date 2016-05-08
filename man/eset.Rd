@@ -1,0 +1,9 @@
+\name{eset}
+\alias{eset}
+\docType{data}
+\title{eset
+}
+\description{
+}
+\usage{data("eset")}
+\keyword{datasets}
