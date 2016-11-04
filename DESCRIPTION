@@ -6,4 +6,5 @@ Date: 2012-08-05
 Author: Martin Morgan
 Maintainer: Martin Morgan <mtmorgan@fhcrc.org>
 Description: This package is for testing functionality.
+Imports: BiocParallel
 License: Artistic-2.0
