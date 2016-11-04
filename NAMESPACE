@@ -1,4 +1,1 @@
-import(methods)
-exportClasses(A, B)
-exportMethods(show, dim)
 
