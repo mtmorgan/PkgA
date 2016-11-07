@@ -7,3 +7,4 @@ Author: Martin Morgan
 Maintainer: Martin Morgan <mtmorgan@fhcrc.org>
 Description: This package is for testing functionality.
 License: Artistic-2.0
+RoxygenNote: 5.0.1
