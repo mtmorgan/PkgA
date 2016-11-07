@@ -9,4 +9,7 @@ fun()
 \description{
 A function
 }
+\references{
+\insertRef{ENCODE_1}{PkgA}
+}
 
