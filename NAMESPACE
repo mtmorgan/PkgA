@@ -1,1 +1,5 @@
+importFrom(BiocParallel,
+    "bpstart", "bplapply", "register", "SnowParam"
+)
 
+export("f0", "f1")
