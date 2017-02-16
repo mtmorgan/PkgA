@@ -1,5 +1,9 @@
 .A <- setClass("A", slots=c(x="numeric"))
 
+A <- function(x) {
+    .A(x=x)
+}
+
 setGeneric("xslot<-", function(x, value) standardGeneric("xslot<-"))
 
 setReplaceMethod("xslot", c("A", "numeric"),
@@ -30,7 +34,17 @@ f1 <- function(v) {
     bplapply(tasks, f1a, v)
 }
 
-.onLoad <- function(...) {
-    if (interactive())
-        register(bpstart(SnowParam(2)))
-}
+setGeneric(
+    "foo",
+    function(x, v) standardGeneric("foo"),
+    signature="x"
+)
+
+setMethod("foo", "A", function(x, v) {
+    tasks <- replicate(2, x)
+    bplapply(tasks, function(x, v) {
+        xslot(x) <- v
+        validObject(x)
+        x
+    }, v)
+})

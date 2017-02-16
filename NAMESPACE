@@ -1,5 +1,7 @@
-importFrom(BiocParallel,
-    "bpstart", "bplapply", "register", "SnowParam"
+import("methods")
+
+importFrom(
+    "BiocParallel", "bpstart", "bplapply", "register", "SnowParam"
 )
 
-export("f0", "f1")
+export("A", "foo", "f0", "f1")
